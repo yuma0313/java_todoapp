@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"></meta>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    <link th:href="@{/css/main.css}" rel="styleSheet" type="text/css">
+    <link th:href="@{/css/base.css}" rel="styleSheet" type="text/css">
+</head>
+<body>
+<header th:replace="header::header"></header>
+	<main>
+	    <div class="container">
+	        <h2 class="start-message">ログインorユーザー登録をしてください</h2>
+	        <form class="start-login-button-container">
+	        	<button class="start-login-button"><a th:href="@{/login}">ログイン</a></button>
+		        <button class="start-login-button"><a th:href="@{/register}">登録</a></button>
+	        </form>
+	    </div>
+    </main>
+</body>
+</html>

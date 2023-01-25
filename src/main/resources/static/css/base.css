@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+html, 
+body {
+    margin: 0 auto;
+    color: var(--black);
+    font-family: 'BIZ UDPGothic', sans-serif;
+}
+
+.wrapper {
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.blue-button > a, .green-button > a, .gray-button > a, .red-button > a, .orange-button > a {
+    color: white;
+}
+
+
+
+button {
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    border-radius: 6px;
+    color: white;
+}
+
+.green-button {
+    background-color: #3bba00;
+}
+
+.blue-button {
+    background-color: #67c4e1;
+}
+
+.red-button {
+    background-color: #FF0000;
+
+}
+
+.gray-button {
+    background-color: #9B9B9B;
+
+}
+
+.orange-button {
+    background-color: #ff7a00;
+}
+
+#header {
+    background-color: #67c4e1;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#nav {
+    display: flex;
+    gap: 3rem;
+    margin: 0 auto;
+}
+
+.nav-links {
+    color: white;
+    display: block;
+    padding: 14px;
+}
+
+.nav-links:hover {
+    color: black;
+}

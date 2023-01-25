@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up - CodeJava</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    <link th:href="@{/css/main.css}" rel="styleSheet" type="text/css">
+</head>
+<body>
+<header th:replace="header::header"></header>
+    <main>
+        <h2 class="authentication-title">登録して下さい</h2>
+        <form th:action="@{/process_register}" th:object="${user}"
+            method="post">
+            <p th:if="${#fields.hasErrors('passwordValid')}" th:errors="*{passwordValid}"></p>
+            <input type="text" placeholder="Name" th:field="*{username}"></input>
+            <input type="email" placeholder="Email" th:field="*{email}"></input>
+            <input type="password" th:field="*{password}" placeholder="Password">
+            <input type="password" th:field="*{passwordConfirmation}" placeholder="Password Confirmation">
+            <div class="single-button-container">
+	            <button type="submit" class="blue-button">登録</button>
+	        </div>
+        </form>
+    </main>
+</body>
+</html>
